@@ -1,0 +1,22 @@
+{
+  "name": "algodaily",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krankj/algodaily.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krankj/algodaily/issues"
+  },
+  "homepage": "https://github.com/krankj/algodaily#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
