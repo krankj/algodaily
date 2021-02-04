@@ -1,4 +1,4 @@
-const colors = require("colors");
+require("colors");
 
 function reverseBruteForce(str) {
   let reversed = "";

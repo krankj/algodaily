@@ -1,4 +1,6 @@
-const colors = require("colors");
+require("colors");
+
+/* The following function finds the intersection of 2 arrays without any duplicates ( hence we use sets here )*/
 
 function intersection(arr1, arr2) {
   const setA = new Set(arr1);
