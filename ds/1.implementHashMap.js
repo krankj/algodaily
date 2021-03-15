@@ -24,6 +24,8 @@ class HashMap {
   }
   set(key, value) {
     let hash = this.hashFn(key);
+    /* We create an empty array if the index corresponding to the hash is empty, 
+    so that we can add more elements to the same hash, in case a collision occurs*/
     if (!this.storage[hash]) this.storage[hash] = [];
     this.storage[hash].push([key, value]);
   }
