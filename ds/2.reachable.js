@@ -11,7 +11,6 @@ Can be used for something like connecting flights
 function Node(value) {
   this.value = value;
   this.next = [];
-  this.reverse = true;
 }
 
 class List {
@@ -68,5 +67,6 @@ const subString = (str, subStr) => {
   return "Found";
 };
 
-console.log("Output: ", subString("abracadarbaaaa", "cr"));
+console.log("Output: ", subString("abracadarbaaaa", "bar"));
 console.log("Output: ", subString("arrarr", "arr"));
+console.log("Output: ", subString("Srinivas", "nin"));
