@@ -12,7 +12,31 @@ isDollarDeleteEqual(input);
 */
 
 function isDollarDeleteEqual(arr) {
-  return;
+  let prev = "";
+  for (let i = 0; i < arr.length; i++) {
+    let stripped = getStrippedString(arr[i]);
+    if (i !== 0) {
+      if (prev !== stripped) {
+        return false;
+      }
+    }
+    prev = stripped;
+  }
+  return true;
 }
 
-console.log(`Output: ${isDollarDeleteEqual(["f$st,st"])}`);
+function replace(str, index) {
+  let toReplaceIndex = index - 1;
+  return (
+    str.substring(0, toReplaceIndex) + "" + str.substring(toReplaceIndex + 2)
+  );
+}
+
+function getStrippedString(str) {
+  let dollarIndex = str.indexOf("$");
+  return replace(str, dollarIndex);
+}
+
+console.log(
+  `Output: ${isDollarDeleteEqual(["f$st", "st", "st", "r$st", "f$st", "a$st"])}`
+);
