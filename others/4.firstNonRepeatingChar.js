@@ -5,6 +5,8 @@ You're given a string of random alphanumerical characters with a length between 
 
 Write a method to return the first character in the string that does not repeat itself later on.
 
+Time complexity must be O(A) where A is the number of ASCII characters
+
 https://algodaily.com/challenges/find-first-non-repeating-character
 */
 
