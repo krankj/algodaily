@@ -13,11 +13,12 @@ https://algodaily.com/challenges/find-first-non-repeating-character
 function findFirstNonRepeatingChar(str) {
   let map = new Map();
   let nonRepMap = new Map();
-
+  let firstCharArr = [];
   for (let c of str) {
     if (map.has(c)) {
       nonRepMap.delete(c);
     } else {
+      firstCharArr[c.charCodeAt()] = 1;
       nonRepMap.set(c, 1);
       map.set(c, 1);
     }
