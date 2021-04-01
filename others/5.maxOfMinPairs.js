@@ -15,18 +15,19 @@ https://algodaily.com/challenges/max-of-min-pairs
 
 const maxOfMinPairs = (arr) => {
   let sortedArr = arr.sort((a, b) => a - b); // if a sort function is ommitted, then the elements are converted to strings and then sorted
-  let n = arr.length;
-  let sum;
-  if (n > 2) {
-    sum = sortedArr[n - 2] + sortedArr[n - 4];
-  } else {
-    sum = sortedArr[n - 2];
+  let sum = 0;
+  for (let i = 0; i < arr.length - 1; i += 2) {
+    sum += sortedArr[i];
   }
+
   return sum;
 };
-
+const arr0 = [3, 4];
 const arr1 = [3, 4, 2, 5];
 const arr2 = [10, 5, 1, 6, 8, 4];
+const arr3 = [1, 3, 2, 1, 4, 5];
 
-console.log(`Output: ${maxOfMinPairs(arr1)}`.magenta.bold);
-console.log(`Output: ${maxOfMinPairs(arr2)}`.magenta.bold);
+console.log(`Output 0: ${maxOfMinPairs(arr0)}`.magenta.bold);
+console.log(`Output 1: ${maxOfMinPairs(arr1)}`.magenta.bold);
+console.log(`Output 2: ${maxOfMinPairs(arr2)}`.magenta.bold);
+console.log(`Output 3: ${maxOfMinPairs(arr3)}`.magenta.bold);
