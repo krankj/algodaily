@@ -22,6 +22,7 @@ Constraints
 Link: https://algodaily.com/challenges/find-missing-number-in-array
 */
 
+//this is only better, atleast looks like!
 function missingNumberInArrBrute(arr) {
   let start = arr[0];
   let next = start;
@@ -42,8 +43,28 @@ function missingNumberInArrBrute(arr) {
   return arr2;
 }
 
+function missingNumberInArrEff(arr) {
+  let n = arr.length;
+  let maxEle = arr[n - 1];
+
+  let indices = Array(maxEle + 1).fill(0);
+
+  for (let i = 0; i < n; i++) {
+    indices[arr[i]] = 1;
+  }
+  for (let i = arr[0]; i <= arr[n - 1]; i++) {
+    if (indices[i] === 0) {
+      console.log(i + " ");
+    }
+  }
+}
+
 const arr1 = [1, 2, 4, 5, 7, 10];
 
 console.time("brute T");
 console.log(`Output: ${missingNumberInArrBrute(arr1)}`);
 console.timeEnd("brute T");
+
+console.time("Eff T");
+console.log(`Output: ${missingNumberInArrEff(arr1)}`);
+console.timeEnd("Eff T");
